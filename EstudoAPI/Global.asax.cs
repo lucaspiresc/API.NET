@@ -18,7 +18,7 @@ namespace EstudoAPI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             var container = new Container();
-            container.Register<IClienteService, ClienteService>();
+            container.RegisterSingleton<IClienteService, ClienteService>();
 
             container.Verify();
 
