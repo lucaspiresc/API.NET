@@ -34,10 +34,16 @@ function novoCadastro() {
 
 	Http.onreadystatechange = function() { // Call a function when the state changes.
 		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-			// Request finished. Do processing here.
+			clientes = clientes.filter(function(c){
+				return cliente.IdCliente != cliente;
+			});
+			
+			clientes.push(cliente);
+			console.log(clientes);
 		}
 	}
 	Http.send(JSON.stringify(cliente));
+	
 	
 }
 
@@ -47,7 +53,10 @@ function deletarCadastro() {
 
 	Http.onreadystatechange = function() { // Call a function when the state changes.
 		if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-			// Request finished. Do processing here.
+			clientes = clientes.filter(function(c){
+				return cliente.IdCliente != cliente;
+			});
+			console.log(clientes);
 		}
 	}
 	Http.send();
@@ -59,7 +68,6 @@ function buscarCadastro() {
 
 	Http.onreadystatechange = (e) => {
 	  clientes = JSON.parse(Http.responseText);
-	  console.log(Http.responseText);
 	  console.log(clientes);
 	}
 }

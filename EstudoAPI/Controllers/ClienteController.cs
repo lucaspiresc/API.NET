@@ -2,9 +2,11 @@
 using EstudoAPI.Services.Interfaces;
 using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace EstudoAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ClienteController : ApiController
     {
         private readonly IClienteService clienteService;
