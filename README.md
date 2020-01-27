@@ -1,3 +1,3 @@
-# EstudoWebAPI
+# API .NET
 
-Projeto destinado ao estudo de Web API através da implementação de um exemplo básico.
+Exemplo simples de API implementada com o framework .NET.
