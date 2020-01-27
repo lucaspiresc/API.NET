@@ -1,3 +1,3 @@
 # API .NET
 
-Exemplo simples de API implementada com o framework .NET.
+Exemplo simples de API implementado com o framework .NET.
